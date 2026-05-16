@@ -7,6 +7,7 @@ import Header from '@/components/Header/Header'
 import { TransactionRow } from '@/components/TransactionRow/TransactionRow'
 import { useTransactionFilters } from '@/shared/hooks/useTransactionFilters'
 import styles from './TransactionsPage.module.css'
+import type { Transaction } from '@/shared/types/transaction.types'
 
 const TransactionsPage = () => {
   const {
@@ -74,12 +75,15 @@ const TransactionsPage = () => {
         <button
           type="button"
           className={styles.csv_button}
-          onClick={e => {
-            e.stopPropagation()
-            exportToCSV(sampleData)
-          }}
+          onClick={() =>
+            exportToCSV(
+              JSON.parse(
+                localStorage.getItem('transactions') as string
+              ) as Transaction[]
+            )
+          }
         >
-          <FileIcon size={24} strokeWidth={1.5} />
+          <FileIcon />
           CSV
         </button>
       </div>
