@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Geist:ital,wght@0,100..900;1,100..900&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -28,9 +30,9 @@
   --button-secondary-bg: #eef1f6;
   --button-secondary-text: #141824;
 
-  --sans: system-ui, "Segoe UI", Roboto, sans-serif;
-  --heading: system-ui, "Segoe UI", Roboto, sans-serif;
-  --mono: ui-monospace, Consolas, monospace;
+  --sans: "Geist", system-ui, "Segoe UI", Roboto, sans-serif;
+  --heading: "Geist", system-ui, "Segoe UI", Roboto, sans-serif;
+  --mono: "Geist", ui-monospace, Consolas, monospace;
 
   font: 18px / 145% var(--sans);
   letter-spacing: 0.18px;
@@ -79,6 +81,7 @@
   justify-content: center;
   width: 100%;
   flex-direction: column;
+  font-family: "Geist", sans-serif;
 }
 
 button {
