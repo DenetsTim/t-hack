@@ -26,7 +26,7 @@ const TransactionsPage = () => {
         </div>
       </div>
       <button type="button" className={styles.add_button}>Добавить</button>
-      <button type="button" className={styles.csv} onClick={() => exportToCSV(sampleData)}><FileIcon />CSV</button>
+      <button type="button" className={styles.csv_button} onClick={() => exportToCSV(sampleData)}><FileIcon />CSV</button>
     </div>
   )
 }

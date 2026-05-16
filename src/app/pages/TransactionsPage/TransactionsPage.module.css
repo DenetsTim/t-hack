@@ -10,7 +10,7 @@
   border: 1px solid var(--border);
   border-radius: 15px;
   gap: 15px;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 
   h1 {
     font-size: 1.25rem;
@@ -63,9 +63,28 @@
   color: var(--expense);
 }
 
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.add_button,
+.csv_button {
+  width: 100%;
+  padding: 15px 50px;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 500;
+  border: 1px solid var(--border);
+}
 
 .add_button {
-  padding: 15px 50px;
   background-color: var(--accent);
-  border-radius: 10px;
+  color: var(--text);
+}
+.csv_button {
+  background-color: var(--surface);
 }
