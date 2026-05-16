@@ -1,14 +1,15 @@
 export const TransactionType = {
-    Income: 1,
-    Expense: -1
-} as const;
+  Income: 1,
+  Expense: -1
+} as const
 
-export type TransactionType = typeof TransactionType[keyof typeof TransactionType];
+export type TransactionType =
+  (typeof TransactionType)[keyof typeof TransactionType]
 
 export type Transaction = {
-    type: TransactionType,
-    amount: number,
-    category: "food" | "transport" | "entertainment" | "education" | "other",
-    date: Date,
-    comment: string
+  type: TransactionType
+  amount: number
+  category: 'food' | 'transport' | 'entertainment' | 'education' | 'other'
+  date: Date
+  comment: string
 }
