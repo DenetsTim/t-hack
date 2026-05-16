@@ -1,5 +1,6 @@
-import { ArrowDownIcon, ArrowUpIcon } from 'lucide-react'
+import { ArrowDownIcon, ArrowUpIcon, FileIcon } from 'lucide-react'
 import styles from './TransactionsPage.module.css'
+import { exportToCSV, sampleData } from '@/app/utils/exportToCSV'
 
 const TransactionsPage = () => {
   return (
@@ -25,7 +26,7 @@ const TransactionsPage = () => {
         </div>
       </div>
       <button type="button" className={styles.add_button}>Добавить</button>
-      <button type="button" className={styles.csv}>CSV</button>
+      <button type="button" className={styles.csv} onClick={() => exportToCSV(sampleData)}><FileIcon />CSV</button>
     </div>
   )
 }

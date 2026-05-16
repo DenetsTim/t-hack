@@ -3,7 +3,6 @@ import {
   TransactionType
 } from '../../shared/types/transaction.types'
 
-<<<<<<< HEAD
 export function exportToCSV(data: Transaction[]): void {
   if (!data || data.length === 0) return;
 
@@ -15,28 +14,11 @@ export function exportToCSV(data: Transaction[]): void {
 
       if (cell instanceof  Date)
         cell = cell.toISOString().split('.')[0].replace("T", " ");
-        
+      
       cell = String(cell).replace(/"/g, '""');
       return `"${cell}"`;
     }).join(';')
   );
-=======
-export function downloadArrayToCSV(data: Transaction[]): void {
-  if (!data || data.length === 0) return
-
-  const headers = Object.keys(data[0])
->>>>>>> 77237499ed85ca5e0d9b71a14a28f59fd73a1680
-
-  const csvRows = data.map((row: Transaction) =>
-    headers
-      .map((header: string) => {
-        let cell =
-          row[header] !== undefined && row[header] !== null ? row[header] : ''
-        cell = String(cell).replace(/"/g, '""')
-        return `"${cell}"`
-      })
-      .join(';')
-  )
 
   const csvContent = [headers.join(';'), ...csvRows].join('\n')
 
