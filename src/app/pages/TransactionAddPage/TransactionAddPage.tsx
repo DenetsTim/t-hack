@@ -33,16 +33,16 @@ const TransactionsAddPage = () => {
     useEffect(() => { console.log(typeRef.current, amountRef.current, categoryRef.current, dateRef.current, commentRef.current) }, [typeRef.current])
 
     return (
-        <div className={styles.form}>
+        <form className={styles.form}>
             <label htmlFor="type">Операция</label>
-            <select className={styles.select} id="type" ref={typeRef} defaultValue={TransactionType.Expense}>
+            <select className={styles.select} id="type" ref={typeRef} defaultValue={TransactionType.Expense} required>
                 <option value={TransactionType.Income}>+</option>
                 <option value={TransactionType.Expense}>-</option>
             </select>
             <label htmlFor="amount">Сумма</label>
             <input className={styles.input} type="number" id="amount" ref={amountRef} />
             <label htmlFor="category">Категория</label>
-            <select className={styles.select} id="category" ref={categoryRef} defaultValue="other">
+            <select className={styles.select} id="category" ref={categoryRef} defaultValue="other" required>
                 <option value="food">Еда</option>
                 <option value="transport">Транспорт</option>
                 <option value="education">Образование</option>
@@ -50,12 +50,12 @@ const TransactionsAddPage = () => {
                 <option value="other">Другое</option>
             </select>
             <label htmlFor="date">Время</label>
-            <input className={styles.input} type="datetime-local" id="date" ref={dateRef} />
+            <input className={styles.input} type="datetime-local" id="date" ref={dateRef} required/>
             <label htmlFor="comment">Комментарий</label>
-            <input className={styles.input} type="text" id="comment" ref={commentRef} />
+            <input className={styles.input} type="text" id="comment" ref={commentRef} required/>
             <button className={styles.addButton} type="submit" onClick={addTransaction}>Добавить</button>
             <button className={styles.cancelButton} type="submit" onClick={() => { navigate("/") }}>Отмена</button>
-        </div>
+        </form>
     )
 }
 
