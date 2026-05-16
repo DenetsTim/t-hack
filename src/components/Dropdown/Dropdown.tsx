@@ -40,7 +40,6 @@ const Dropdown: FC<DropdownProps> = ({
         onClick={onToggle}
       >
         <span>{displayLabel}</span>
-        <span className={styles.arrow}>{open ? '▲' : '▼'}</span>
       </button>
 
       {open && (

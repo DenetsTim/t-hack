@@ -4,12 +4,15 @@ import {
   SORT_OPTIONS,
   TYPE_OPTIONS
 } from '@/shared/consts/transactions.data'
-
+import type {
+  CategoryFilter,
+  SortOption,
+  TypeFilter
+} from '@/shared/types/transaction.types'
 import Dropdown from '../Dropdown/Dropdown'
 import { FilterPill } from '../FilterPill/FilterPill'
 import { SearchBar } from '../SearchBar/SearchBar'
 import styles from './FilterBar.module.css'
-import type { CategoryFilter, SortOption, TypeFilter } from '@/shared/types/transaction.types'
 
 interface FilterBarProps {
   search: string
@@ -40,11 +43,9 @@ const FilterBar: FC<FilterBarProps> = ({
   onToggleDropdown,
   onSelectDropdown
 }) => {
-  // Find human-readable labels for the active pills
   const categoryLabel = CATEGORY_OPTIONS.find(o => o.value === category)?.label
   const typeLabel = TYPE_OPTIONS.find(o => o.value === type)?.label
 
-  // SORT_OPTIONS is a plain string[] so we wrap it for Dropdown
   const sortOptions = SORT_OPTIONS.map(s => ({ value: s, label: s }))
 
   return (

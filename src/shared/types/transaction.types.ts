@@ -1,5 +1,3 @@
-// ─── TransactionType (const enum pattern) ────────────────────────────────────
-
 export const TransactionType = {
   Income: 'Income',
   Expense: 'Expense'
@@ -8,16 +6,12 @@ export const TransactionType = {
 export type TransactionType =
   (typeof TransactionType)[keyof typeof TransactionType]
 
-// ─── Category ─────────────────────────────────────────────────────────────────
-
 export type TransactionCategory =
   | 'food'
   | 'transport'
   | 'entertainment'
   | 'education'
   | 'other'
-
-// ─── Transaction ──────────────────────────────────────────────────────────────
 
 export type Transaction = {
   type: TransactionType
@@ -26,8 +20,6 @@ export type Transaction = {
   date: Date
   comment: string
 }
-
-// ─── Filter / Sort ────────────────────────────────────────────────────────────
 
 export type SortOption = 'Дата ↑' | 'Дата ↓' | 'Сумма'
 

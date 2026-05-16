@@ -1,5 +1,3 @@
-// ─── Filter options ───────────────────────────────────────────────────────────
-
 import {
   type SortOption,
   type Transaction,
@@ -29,8 +27,6 @@ export const TYPE_OPTIONS: Array<{
 ]
 
 export const SORT_OPTIONS: SortOption[] = ['Дата ↑', 'Дата ↓', 'Сумма']
-
-// ─── Mock data ────────────────────────────────────────────────────────────────
 
 export const MOCK_TRANSACTIONS: Transaction[] = [
   {

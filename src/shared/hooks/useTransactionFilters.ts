@@ -8,8 +8,6 @@ import type {
   TypeFilter
 } from '../types/transaction.types'
 
-// ─── Return type ──────────────────────────────────────────────────────────────
-
 interface UseTransactionFiltersReturn extends FilterState {
   filtered: Transaction[]
   openDropdown: string | null
@@ -23,8 +21,6 @@ interface UseTransactionFiltersReturn extends FilterState {
   selectDropdown: (setter: (v: never) => void, value: never) => void
 }
 
-// ─── Hook ─────────────────────────────────────────────────────────────────────
-
 export function useTransactionFilters(
   transactions: Transaction[] = MOCK_TRANSACTIONS
 ): UseTransactionFiltersReturn {
@@ -37,7 +33,6 @@ export function useTransactionFilters(
   const filtered = useMemo<Transaction[]>(() => {
     let list = [...transactions]
 
-    // Filter by comment text (replaces old title field)
     if (search.trim()) {
       list = list.filter(t =>
         t.comment.toLowerCase().includes(search.toLowerCase())
