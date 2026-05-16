@@ -24,7 +24,8 @@ const TransactionsPage = () => {
           <ArrowDownIcon size={32} strokeWidth={1.5} color="var(--expense)" />
         </div>
       </div>
-      <button type="button">Добавить транзакцию</button>
+      <button type="button" className={styles.add_button}>Добавить</button>
+      <button type="button" className={styles.csv}>CSV</button>
     </div>
   )
 }

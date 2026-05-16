@@ -62,3 +62,10 @@
 .expenses .text_wrapper h2 {
   color: var(--expense);
 }
+
+
+.add_button {
+  padding: 15px 50px;
+  background-color: var(--accent);
+  border-radius: 10px;
+}
