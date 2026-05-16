@@ -1,0 +1,133 @@
+.form {
+	width: 100%;
+	padding: 20px;
+	border: 1px solid var(--border);
+	border-radius: 22px;
+	background: var(--surface);
+	box-shadow: var(--shadow);
+
+	display: flex;
+	flex-direction: column;
+	gap: 14px;
+}
+
+.title {
+	margin: 0 0 4px;
+	font-size: 22px;
+	font-weight: 800;
+	color: var(--text);
+	letter-spacing: -0.03em;
+}
+
+.row {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+label {
+	font-size: 14px;
+	font-weight: 600;
+	color: var(--text-muted);
+}
+
+.input,
+.select {
+	width: 100%;
+	height: 48px;
+	padding: 0 14px;
+
+	border: 1px solid var(--border);
+	border-radius: 14px;
+
+	background: var(--input-bg);
+	color: var(--text);
+
+	font-size: 15px;
+	font-weight: 500;
+	font-family: inherit;
+
+	outline: none;
+	transition:
+		border-color 0.15s ease,
+		box-shadow 0.15s ease,
+		background-color 0.15s ease;
+}
+
+.input::placeholder {
+	color: var(--text-muted);
+}
+
+.input:focus,
+.select:focus {
+	border-color: var(--accent);
+	box-shadow: 0 0 0 4px rgba(255, 216, 77, 0.18);
+}
+
+.select {
+	appearance: none;
+	cursor: pointer;
+}
+
+.dateInput {
+	composes: input;
+	cursor: pointer;
+}
+
+.dateInput::-webkit-calendar-picker-indicator {
+	cursor: pointer;
+	opacity: 0.65;
+}
+
+:global([data-theme="dark"]) .dateInput::-webkit-calendar-picker-indicator {
+	filter: invert(1);
+}
+
+.actions {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 12px;
+	margin-top: 6px;
+}
+
+button {
+	width: 100%;
+	padding: 15px 50px;
+	border-radius: 10px;
+	font-size: 1rem;
+	font-weight: 500;
+	text-decoration: none;
+	border: 1px solid var(--border);
+}
+
+.submitButton {
+	background-color: var(--income);
+	color: #141824;
+}
+
+.cancelButton {
+	background: var(--button-secondary-bg);
+	color: var(--button-secondary-text);
+	border-color: var(--border);
+}
+
+.cancelButton:hover {
+	border-color: var(--accent);
+}
+
+@media (max-width: 430px) {
+	.form {
+		padding: 18px;
+		border-radius: 20px;
+	}
+
+	.title {
+		font-size: 20px;
+	}
+
+	.input,
+	.select,
+	.button {
+		height: 46px;
+	}
+}
