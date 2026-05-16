@@ -2,6 +2,7 @@ import { ArrowDownIcon, ArrowUpIcon, FileIcon } from 'lucide-react'
 import styles from './TransactionsPage.module.css'
 import { exportToCSV, sampleData } from '@/app/utils/exportToCSV'
 import { Link } from 'react-router'
+import type { Transaction } from '@/shared/types/transaction.types'
 
 const TransactionsPage = () => {
   return (
@@ -28,7 +29,7 @@ const TransactionsPage = () => {
       </div>
       <div className={styles.buttons}>
         <Link to="/add" type="button" className={styles.add_button}>Добавить</Link>
-        <button type="button" className={styles.csv_button} onClick={() => exportToCSV(sampleData)}><FileIcon />CSV</button>
+        <button type="button" className={styles.csv_button} onClick={() => exportToCSV(JSON.parse(localStorage.getItem('transactions') as string) as Transaction[])}><FileIcon />CSV</button>
       </div>
     </div>
   )

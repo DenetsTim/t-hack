@@ -15,13 +15,14 @@ const TransactionsAddPage = () => {
 
     const addTransaction = () => {
         console.log(localStorage.getItem('transactions'));
-        const newTransactions = JSON.parse(localStorage.getItem('transactions') as string) as Transaction[];
+        let newTransactions = JSON.parse(localStorage.getItem('transactions') as string) as Transaction[];
+        if (newTransactions === null) newTransactions = [];
         newTransactions?.push({
-            type: typeRef.current || TransactionType.Expense,
-            amount: Number(amountRef.current),
-            category: categoryRef.current || "other",
-            date: new Date(dateRef.current || new Date()),
-            comment: commentRef.current || ""
+            type: typeRef.current.value || TransactionType.Expense,
+            amount: Number(amountRef.current.value),
+            category: categoryRef.current.value || "other",
+            date: new Date(dateRef.current.value || new Date()),
+            comment: commentRef.current.value || ""
         })
 
         localStorage.setItem('transactions', JSON.stringify(newTransactions));
@@ -40,14 +41,14 @@ const TransactionsAddPage = () => {
             </select>
             <label htmlFor="amount">Сумма</label>
             <input className={styles.input} type="number" id="amount" ref={amountRef} />
-            {typeRef.current === TransactionType.Expense && <label htmlFor="category">Категория</label>}
-            {typeRef.current === TransactionType.Expense && <select className={styles.select} id="category" ref={categoryRef} defaultValue="other">
+            <label htmlFor="category">Категория</label>
+            <select className={styles.select} id="category" ref={categoryRef} defaultValue="other">
                 <option value="food">Еда</option>
                 <option value="transport">Транспорт</option>
                 <option value="education">Образование</option>
                 <option value="entertainment">Развлечения</option>
                 <option value="other">Другое</option>
-            </select>}
+            </select>
             <label htmlFor="date">Время</label>
             <input className={styles.input} type="datetime-local" id="date" ref={dateRef} />
             <label htmlFor="comment">Комментарий</label>
