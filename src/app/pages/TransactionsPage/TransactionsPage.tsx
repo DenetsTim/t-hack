@@ -4,6 +4,7 @@ import { Link } from 'react-router'
 import { exportToCSV, sampleData } from '@/app/utils/exportToCSV'
 import FilterBar from '@/components/FilterBar/FilterBar'
 import Header from '@/components/Header/Header'
+import { TransactionRow } from '@/components/TransactionRow/TransactionRow'
 import { useTransactionFilters } from '@/shared/hooks/useTransactionFilters'
 import styles from './TransactionsPage.module.css'
 
@@ -21,7 +22,8 @@ const TransactionsPage = () => {
     toggleDropdown,
     closeDropdowns,
     selectDropdown,
-    hasActiveFilters
+    hasActiveFilters,
+    filtered
   } = useTransactionFilters()
 
   const handleKeyDown = useCallback(
@@ -66,7 +68,7 @@ const TransactionsPage = () => {
       </div>
 
       <div className={styles.buttons}>
-        <Link to="/add" type="button" className={styles.add_button}>
+        <Link to="/add" className={styles.add_button}>
           Добавить
         </Link>
         <button
@@ -97,6 +99,19 @@ const TransactionsPage = () => {
           onToggleDropdown={toggleDropdown}
           onSelectDropdown={selectDropdown}
         />
+      </div>
+
+      <div className={styles.list}>
+        {filtered.length === 0 ? (
+          <p className={styles.empty}>Ничего не найдено</p>
+        ) : (
+          filtered.map(t => (
+            <TransactionRow
+              key={`${t.date.getTime()}-${t.comment}`}
+              transaction={t}
+            />
+          ))
+        )}
       </div>
     </div>
   )

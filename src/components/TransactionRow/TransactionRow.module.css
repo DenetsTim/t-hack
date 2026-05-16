@@ -1,0 +1,81 @@
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 13px 4px;
+  border-bottom: 1px solid #f3f3f3;
+  border-radius: 8px;
+  cursor: default;
+  transition: background 0.15s;
+}
+
+.row:hover {
+  background: #fafafa;
+}
+
+.row:last-child {
+  border-bottom: none;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.date {
+  font-size: 13px;
+  color: #bbb;
+  min-width: 36px;
+  font-variant-numeric: tabular-nums;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 15px;
+  color: #222;
+  margin-bottom: 4px;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.category {
+  font-size: 11px;
+  color: #888;
+}
+
+.badge {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 6px;
+  letter-spacing: 0.3px;
+}
+
+.badgeIncome {
+  background: #e8f9ee;
+  color: #27ae60;
+}
+
+.badgeExpense {
+  background: #fdecea;
+  color: #e53935;
+}
+
+.amount {
+  font-weight: 700;
+  font-size: 15px;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.amountIncome {
+  color: #27ae60;
+}
+.amountExpense {
+  color: #e53935;
+}
