@@ -1,90 +1,96 @@
 .wrapper {
-  margin-top: 30px;
+	margin-top: 30px;
 }
 
 .balance {
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-  box-shadow: var(--shadow);
-  border: 1px solid var(--border);
-  border-radius: 15px;
-  gap: 15px;
-  margin-bottom: 15px;
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+	box-shadow: var(--shadow);
+	border: 1px solid var(--border);
+	border-radius: 15px;
+	gap: 15px;
+	margin-bottom: 15px;
 
-  h1 {
-    font-size: 1.25rem;
-    color: var(--text-muted);
-    font-weight: 500;
-  }
-  h2 {
-    font-size: 2rem;
-    font-weight: 700;
-  }
+	h1 {
+		font-size: 1.25rem;
+		color: var(--text-muted);
+		font-weight: 500;
+	}
+	h2 {
+		font-size: 2rem;
+		font-weight: 700;
+	}
 }
 
 .transactions_wrapper {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  justify-content: center;
+	display: flex;
+	gap: 10px;
+	align-items: center;
+	justify-content: center;
 }
 
 .incomes,
 .expenses {
-  width: 100%;
-  display: flex;
-  padding: 10px;
-  box-shadow: var(--shadow);
-  border: 1px solid var(--border);
-  border-radius: 15px;
-  align-items: center;
-  justify-content: space-between;
-  .text_wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    h1 {
-      font-size: 1rem;
-      color: var(--text-muted);
-      font-weight: 500;
-    }
-    h2 {
-      font-size: 1.5rem;
-      font-weight: 700;
-    }
-  }
+	width: 100%;
+	display: flex;
+	padding: 10px;
+	box-shadow: var(--shadow);
+	border: 1px solid var(--border);
+	border-radius: 15px;
+	align-items: center;
+	justify-content: space-between;
+	.text_wrapper {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		h1 {
+			font-size: 1rem;
+			color: var(--text-muted);
+			font-weight: 500;
+		}
+		h2 {
+			font-size: 1.5rem;
+			font-weight: 700;
+		}
+	}
 }
 
 .incomes .text_wrapper h2 {
-  color: var(--income);
+	color: var(--income);
 }
 .expenses .text_wrapper h2 {
-  color: var(--expense);
+	color: var(--expense);
 }
 
 .buttons {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 15px;
-  margin-top: 15px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 15px;
+	margin-top: 15px;
 }
 
 .add_button,
 .csv_button {
-  width: 100%;
-  padding: 15px 50px;
-  border-radius: 10px;
-  font-size: 1rem;
-  font-weight: 500;
-  border: 1px solid var(--border);
+	width: 100%;
+	padding: 15px 50px;
+	border-radius: 10px;
+	font-size: 1rem;
+	font-weight: 500;
+	border: 1px solid var(--border);
 }
 
 .add_button {
-  background-color: var(--accent);
-  color: var(--text);
+	background-color: var(--accent);
+	color: #141824;
 }
 .csv_button {
-  background-color: var(--surface);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+
+	background-color: var(--surface);
+	color: var(--text);
 }
