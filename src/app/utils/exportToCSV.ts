@@ -1,6 +1,6 @@
 import { TransactionType, type Transaction } from '../../shared/types/transaction.types';
 
-export function downloadArrayToCSV(data: Transaction[]): void {
+export function exportToCSV(data: Transaction[]): void {
   if (!data || data.length === 0) return;
 
   const headers = Object.keys(data[0]);
@@ -8,6 +8,10 @@ export function downloadArrayToCSV(data: Transaction[]): void {
   const csvRows = data.map((row: Transaction) => 
     headers.map((header: string) => {
       let cell = row[header] !== undefined && row[header] !== null ? row[header] : '';
+
+      if (cell instanceof  Date)
+        cell = cell.toISOString().split('.')[0].replace("T", " ");
+        
       cell = String(cell).replace(/"/g, '""');
       return `"${cell}"`;
     }).join(';')
