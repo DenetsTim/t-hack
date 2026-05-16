@@ -1,8 +1,8 @@
 .toggler {
-	width: fit-content;
-	height: fit-content;
-	padding: 5px;
-	background: transparent;
+  width: fit-content;
+  height: fit-content;
+  padding: 5px;
+  background: transparent;
 
-	cursor: pointer;
+  cursor: pointer;
 }
