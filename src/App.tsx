@@ -1,10 +1,12 @@
-import TransactionsPage from './app/pages/TransactionsPage'
+import TransactionsPage from './app/pages/TransactionsPage/TransactionsPage'
+import Header from './components/Header/Header'
 
 function App() {
   return (
-    <div>
+    <>
+      <Header />
       <TransactionsPage />
-    </div>
+    </>
   )
 }
 
