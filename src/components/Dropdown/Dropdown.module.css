@@ -1,0 +1,18 @@
+.dropdownWrap {
+  flex: 1;
+  position: "relative";
+}
+.dropdownBtn {
+  width: "100%";
+  background: "#f7f8fa";
+  border: "1.5px solid #ececec";
+  border-radius: 10px;
+  padding: "9px 10px";
+  font-size: 1rem;
+  color: "#444";
+  cursor: "pointer";
+  display: "flex";
+  justify-content: "space-between";
+  align-items: "center";
+  font-weight: 500;
+}

@@ -1,0 +1,42 @@
+.wrap {
+  display: flex;
+  align-items: center;
+  box-shadow: var(--shadow);
+  border-radius: 12px;
+  padding: 10px 14px;
+  gap: 8px;
+  border: 1.5px solid transparent;
+  transition: border-color 0.2s;
+  margin-top: 15px;
+}
+
+.wrap:focus-within {
+  border-color: var(--accent);
+}
+
+.input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 14px;
+  color: #333;
+}
+
+.input::placeholder {
+  color: var(--text-muted);
+}
+
+.clear {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-muted);
+  font-size: 13px;
+  padding: 0;
+  transition: color 0.15s;
+}
+
+.clear:hover {
+  color: #666;
+}
