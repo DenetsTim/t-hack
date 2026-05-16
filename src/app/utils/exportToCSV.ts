@@ -3,6 +3,7 @@ import {
   TransactionType
 } from '../../shared/types/transaction.types'
 
+//Создает файл формата csv из входных данных
 export function exportToCSV(data: Transaction[]): void {
   if (!data || data.length === 0) return;
 
