@@ -3,14 +3,13 @@
   justify-content: space-between;
   align-items: center;
   padding: 13px 4px;
-  border-bottom: 1px solid #f3f3f3;
   border-radius: 8px;
   cursor: default;
   transition: background 0.15s;
 }
 
 .row:hover {
-  background: #fafafa;
+  background: var(--bg);
 }
 
 .row:last-child {
@@ -25,7 +24,7 @@
 
 .date {
   font-size: 13px;
-  color: #bbb;
+  color: var(--text);
   min-width: 36px;
   font-variant-numeric: tabular-nums;
 }
@@ -33,7 +32,7 @@
 .title {
   font-weight: 600;
   font-size: 15px;
-  color: #222;
+  color: var(--text);
   margin-bottom: 4px;
 }
 
@@ -45,7 +44,7 @@
 
 .category {
   font-size: 11px;
-  color: #888;
+  color: var(--text-muted);
 }
 
 .badge {

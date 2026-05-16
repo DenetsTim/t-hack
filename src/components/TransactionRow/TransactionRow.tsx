@@ -13,7 +13,6 @@ export function TransactionRow({ transaction: t }: TransactionRowProps) {
   const categoryLabel =
     CATEGORY_OPTIONS.find(o => o.value === t.category)?.label ?? t.category
 
-  // Date → "16.05"
   const dateLabel = t.date.toLocaleDateString('ru-RU', {
     day: '2-digit',
     month: '2-digit'

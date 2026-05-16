@@ -1,5 +1,5 @@
 .wrapper {
-	margin-top: 30px;
+	margin-top: 4dvb;
 }
 
 .balance {
@@ -94,4 +94,10 @@
 
 	background-color: var(--surface);
 	color: var(--text);
+}
+
+.list {
+  box-shadow: var(--shadow);
+  padding: 15px;
+  border-radius: 10px;
 }

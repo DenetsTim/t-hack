@@ -1,6 +1,6 @@
-import { SunIcon, MoonIcon } from 'lucide-react'
-import styles from './ThemeToggle.module.css'
+import { MoonIcon, SunIcon } from 'lucide-react'
 import { useEffect, useState } from 'react'
+import styles from './ThemeToggle.module.css'
 
 type ThemeMode = 'light' | 'dark'
 
@@ -29,9 +29,9 @@ const ThemeToggle = () => {
       onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
     >
       {theme === 'dark' ? (
-        <MoonIcon strokeWidth={1.5} />
+        <MoonIcon strokeWidth={1.5} color='white' />
       ) : (
-        <SunIcon strokeWidth={1.5} color="black" />
+        <SunIcon strokeWidth={1.5} color='black' />
       )}
     </button>
   )

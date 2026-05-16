@@ -3,6 +3,7 @@
   height: fit-content;
   padding: 5px;
   background: transparent;
-
   cursor: pointer;
+  box-shadow: none;
+  border: none;
 }
