@@ -3,6 +3,7 @@ import { useCallback } from 'react'
 import { Link } from 'react-router'
 import { exportToCSV, sampleData } from '@/app/utils/exportToCSV'
 import FilterBar from '@/components/FilterBar/FilterBar'
+import Header from '@/components/Header/Header'
 import { useTransactionFilters } from '@/shared/hooks/useTransactionFilters'
 import styles from './TransactionsPage.module.css'
 
@@ -41,6 +42,7 @@ const TransactionsPage = () => {
       onClick={closeDropdowns}
       onKeyDown={handleKeyDown}
     >
+      <Header />
       <div className={styles.balance}>
         <h1>Баланс</h1>
         <h2>24 850 ₽</h2>
